@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development ",
     "dev": "webpack --mode development --output ./dist/leaf.js",
-    "build": "webpack --mode production --output ./dist/leaf.js"
+    "build": "webpack --mode production --output ./dist/leaf.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -23,13 +25,14 @@
   "bugs": {
     "url": "https://github.com/10secondsofcode/10secondsofcode.git/issues"
   },
-  "homepage": "https://github.com/10secondsofcode/10secondsofcode.git#readme",
+  "homepage": "http://10secondsofcode.github.io/10secondsofcode",
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
+    "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.2",
