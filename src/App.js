@@ -1,7 +1,7 @@
 import React from "react";
-import main from './main.css';
 import { Button } from 'reactstrap';
 import Navigation from './Components/Navigation';
+import Main from './Components/Main';
 
 class App extends React.Component {
   constructor(props){
@@ -28,26 +28,15 @@ class App extends React.Component {
   render() {  
      return (
         <div>
-          <Navigation />
           <div className="container">
+            <Navigation />
+            <div class="row">
+              <Main />
+            </div>
           </div>
-          <Counter />
-          <Header />
-          <Content />
-          <Footer />
+          
         </div>
      );
-  }
-}
-
-class Counter extends React.Component{
-  render(){
-    return (
-      <div>
-          <h1>Simple Counter</h1>  
-          <Button color="danger">Danger!</Button>
-      </div>
-    );
   }
 }
 
