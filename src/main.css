@@ -2,9 +2,16 @@ body {
     line-height: 2;
 }
 
+.main {
+    background-color: #6e60cc !important; 
+}
 
-.materialize-red.lighten-5 {
-    background-color: #fdeaeb !important; }
-  
-  .materialize-red-text.text-lighten-5 {
-    color: #fdeaeb !important; }
+.jumbotron-bg {
+    background-color: #6e60cc !important; 
+}
+
+.main-text{
+    text-align: center;
+    color: white; 
+    font-size: 15px;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from 'reactstrap';
+import main from './main.css';
 import Navigation from './Components/Navigation';
 import Main from './Components/Main';
 
@@ -27,14 +28,11 @@ class App extends React.Component {
 
   render() {  
      return (
-        <div>
-          <div className="container">
+        <div className="main">
+          <div className="container main">
             <Navigation />
-            <div class="row">
-              <Main />
-            </div>
+            <Main />
           </div>
-          
         </div>
      );
   }
