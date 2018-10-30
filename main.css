@@ -1,3 +1,20 @@
+body {
+    line-height: 2;
+}
+
+.main {
+    background-color: #6e60cc !important; 
+}
+
+.jumbotron-bg {
+    background-color: #6e60cc !important; 
+}
+
+.main-text{
+    text-align: center;
+    color: white; 
+    font-size: 15px;
+}
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
