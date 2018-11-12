@@ -4,67 +4,24 @@ import React from 'react';
 class Main extends React.Component {
   render() {
     return (
-        <div className="row  col-sm-12 col-md-12 col-lg-12 container-fluid">
-            <div className="row container container-fluid">
-                <div className="jumbotron container jumbotron-bg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 main-text">
-                                <h1>Debug APIs like a <span className="jumbotron__undie">human</span>, not a robot</h1>
-                                <p className="font-light text-xl no-margin-bottom">Finally, a REST client you'll</p>
-                            </div>
-                        </div>
-                    </div>
+        <div>
+            <div className="row jumbotron thememain" >
+                <div className="col-sm-12">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </div>
             </div>
-            <div className="row  col-sm-12 col-md-12 col-lg-12 container-fluid">
-                <section className="no-margin padding-top-lg padding-bottom-lg">
-                    <div className="container-fluid">     
-                        <div className="row">
-                            <div className="col-sm bg-success">
-                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 padding-top">
-                                    <div className="img--promo">
-                                        <div className="gatsby-image-outer-wrapper" >
-                                            <div className="gatsby-image-wrapper" >
-                                                <div></div>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                    <h3>Organize everything</h3>
-                                    <p>Create workspaces or folders, drag-and-drop requests, and easily import and export your data.</p>
-                                </div>
-                            </div>
-                            <div className="col-sm bg-warning">
-                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 padding-top">
-                                    <div className="img--promo">
-                                        <div className="gatsby-image-outer-wrapper" >
-                                            <div className="gatsby-image-wrapper" >
-                                                <div></div>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                    <h3>Organize everything</h3>
-                                    <p>Create workspaces or folders, drag-and-drop requests, and easily import and export your data.</p>
-                                </div>
-                            </div>
-                            <div className="col-sm bg-success">
-                                <div className="col-4 col-sm-4 col-md-4 col-lg-4 padding-top">
-                                    <div className="img--promo">
-                                        <div className="gatsby-image-outer-wrapper" >
-                                            <div className="gatsby-image-wrapper" >
-                                                <div></div>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                    <h3>Organize everything</h3>
-                                    <p>Create workspaces or folders, drag-and-drop requests, and easily import and export your data.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <div className="row"></div>
+            <div className="row">
+                <div className="col-sm">
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. I
+                </div>
+                <div className="col-sm">
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. I
+                </div>
+                <div className="col-sm">
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. I
+                </div>
             </div>
-            
         </div>
     )
   }
