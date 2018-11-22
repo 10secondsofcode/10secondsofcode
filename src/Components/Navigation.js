@@ -4,9 +4,9 @@ import React from 'react';
 class Navigation extends React.Component {
   render() {
     return (
-      <div className="main thememain">
+      <div className="main thememain-header">
         <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light thememain">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light thememain-header">
             <a className="navbar-brand" href="#">Navbar</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
