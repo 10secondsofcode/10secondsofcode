@@ -28,3 +28,19 @@
     font-size: 16px;
     line-height: 1.5;
 }
+
+.theme-search{
+    display: block !important;
+    margin-top: 10px;
+    text-align:center;
+}
+
+.theme-search-input{
+    width: 60% !important;
+    margin-top: 10px;
+}
+
+.theme-search-btn{
+    width: 14% !important;
+    margin-top: 10px !important;
+}
