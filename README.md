@@ -1,9 +1,5 @@
 # 10secondsofcode 
-The team behind 10-seconds-of-code and official 10-seconds projects. [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2F10secondsofcode%2F10secondsofcode.svg?type=small)](https://app.fossa.io/projects/git%2Bgithub.com%2F10secondsofcode%2F10secondsofcode?ref=badge_small)
-
-# 10secondsofcode
-
-10secondsofcode is a easy way to understand the reactjs snippets in 10 seconds.
+10secondsofcode is a easy way to understand the reactjs snippets in 10 seconds. [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2F10secondsofcode%2F10secondsofcode.svg?type=small)](https://app.fossa.io/projects/git%2Bgithub.com%2F10secondsofcode%2F10secondsofcode?ref=badge_small)
 
 ## Getting Started
 
