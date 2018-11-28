@@ -70,3 +70,28 @@
 .content-main li{
     padding-bottom: 5px;
 }
+
+.theme-text a{
+    color: #00A64D;
+    margin-left:10px;
+}
+
+.banner-text{
+    margin-top:20px;
+    font-size: 14px;    
+}
+
+.banner-text h2{
+    font-size: 25px !important; 
+    line-height: 1.5;
+}
+
+.banner-text p{
+    font-size: 17px !important; 
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.search-content{
+    margin-top:15px;
+}
