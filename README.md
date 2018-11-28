@@ -12,9 +12,8 @@ npm start
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [ReactJs](https://github.com/reactjs) 
+* [BootStrap4](https://getbootstrap.com/docs/4.1/getting-started/introduction/) 
 
 ## Contributing
 
