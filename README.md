@@ -17,7 +17,7 @@ npm start
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/10secondsofcode/10secondsofcode/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+If you have any idea for an improvement or found a bug, do not hesitate to open an issue. And if you have time clone this repo and submit a pull request and help me make *10secondsofcode*, we all dream about! Please read [CONTRIBUTING.md](https://github.com/10secondsofcode/10secondsofcode/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
