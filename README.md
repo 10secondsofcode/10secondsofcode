@@ -2,6 +2,8 @@
 # 10secondsofcode 
 10secondsofcode is a easy way to understand the reactjs snippets in 10 seconds. [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2F10secondsofcode%2F10secondsofcode.svg?type=small)](https://app.fossa.io/projects/git%2Bgithub.com%2F10secondsofcode%2F10secondsofcode?ref=badge_small)
 
+*Website :* [https://10secondsofcode.github.io/10secondsofcode/](https://10secondsofcode.github.io/10secondsofcode/)
+
 ## Getting Started
 
 ```
