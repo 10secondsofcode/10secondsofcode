@@ -9,10 +9,28 @@
     <meta name="msapplication-TileColor" content="#3ab78c">
     <meta property="og:title" content="10secondsofcode - The Modern Reactjs Tutorial ">
     <meta name="description" content="10secondsofcode - Modern ReactJs Tutorial: Reactjs online tutorials, examples and advanced concepts">
-    <link rel="canonical" href="#"> 
+    <link rel="canonical" href="#">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="./public/manifest.json">
+    <link rel="shortcut icon" href="./public/favicon.ico">
 </head>
 <body>
     <div id="app">
     </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+              console.log('Worker registration successful', registration.scope);
+            }, function(err) {
+              console.log('Worker registration failed', err);
+            }).catch(function(err) {
+              console.log(err);
+            });
+          });
+        } else {
+          console.log('Service Worker is not supported by browser.');
+        }
+      </script>
 </body>
 </html>
