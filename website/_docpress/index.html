@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=615badd5">
+    <script src="assets/script.js?t=42463e55"></script>
+    <title>What's In This Document</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title -active link-index" href="index.html">What's In This Document</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title link-directory-structure" href="#directory-structure">Directory Structure</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title link-editing-an-existing-docs-page" href="#editing-an-existing-docs-page">Editing an existing docs page</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title link-editing-an-existing-blog-post" href="#editing-an-existing-blog-post">Editing an existing blog post</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title link-adding-a-new-docs-page-to-an-existing-sidebar" href="#adding-a-new-docs-page-to-an-existing-sidebar">Adding a new docs page to an existing sidebar</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title link-adding-a-new-blog-post" href="#adding-a-new-blog-post">Adding a new blog post</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title link-adding-items-to-your-site's-top-navigation-bar" href="#adding-items-to-your-site's-top-navigation-bar">Adding items to your site's top navigation bar</a>
+            </li>
+            <li class="menu-item -level-1"><a class="link title link-adding-custom-pages" href="#adding-custom-pages">Adding custom pages</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-index">
+        <div class="header-nav">
+          <div class="right">
+          </div>
+        </div>
+        <div class="markdown-body"><p>This website was created with <a href="https://docusaurus.io/">Docusaurus</a>.</p>
+<h1 id="what&apos;s-in-this-document">What&apos;s In This Document</h1>
+<ul>
+<li><a href="#get-started-in-5-minutes">Get Started in 5 Minutes</a></li>
+<li><a href="#directory-structure">Directory Structure</a></li>
+<li><a href="#editing-content">Editing Content</a></li>
+<li><a href="#adding-content">Adding Content</a></li>
+<li><a href="#full-documentation">Full Documentation</a></li>
+</ul>
+<h1 id="get-started-in-5-minutes">Get Started in 5 Minutes</h1>
+<ol>
+<li>Make sure all the dependencies for the website are installed:</li>
+</ol>
+<pre><code class="lang-sh"><span class="pl-c"># Install dependencies</span>
+$ yarn
+</code></pre>
+<ol start="2">
+<li>Run your dev server:</li>
+</ol>
+<pre><code class="lang-sh"><span class="pl-c"># Start the site</span>
+$ yarn start
+</code></pre>
+<h2 id="directory-structure">Directory Structure</h2>
+<p>Your project file structure should look something like this</p>
+<pre><code>my-docusaurus/
+  docs/
+    doc-1.md
+    doc-2.md
+    doc-3.md
+  website/
+    blog/
+      2016-3-11-oldest-post.md
+      2017-10-24-newest-post.md
+    core/
+    node_modules/
+    pages/
+    static/
+      css/
+      img/
+    package.json
+    sidebar.json
+    siteConfig.js
+</code></pre>
+<h1 id="editing-content">Editing Content</h1>
+<h2 id="editing-an-existing-docs-page">Editing an existing docs page</h2>
+<p>Edit docs by navigating to <code>docs/</code> and editing the corresponding document:</p>
+<p><code>docs/doc-to-be-edited.md</code></p>
+<pre><code class="lang-markdown">---
+id: page-needs-edit
+<span class="hljs-section">title: This Doc Needs To Be Edited
+---</span>
+
+Edit me...
+</code></pre>
+<p>For more information about docs, click <a href="https://docusaurus.io/docs/en/navigation">here</a></p>
+<h2 id="editing-an-existing-blog-post">Editing an existing blog post</h2>
+<p>Edit blog posts by navigating to <code>website/blog</code> and editing the corresponding post:</p>
+<p><code>website/blog/post-to-be-edited.md</code></p>
+<pre><code class="lang-markdown">---
+id: post-needs-edit
+<span class="hljs-section">title: This Blog Post Needs To Be Edited
+---</span>
+
+Edit me...
+</code></pre>
+<p>For more information about blog posts, click <a href="https://docusaurus.io/docs/en/adding-blog">here</a></p>
+<h1 id="adding-content">Adding Content</h1>
+<h2 id="adding-a-new-docs-page-to-an-existing-sidebar">Adding a new docs page to an existing sidebar</h2>
+<ol>
+<li>Create the doc as a new markdown file in <code>/docs</code>, example <code>docs/newly-created-doc.md</code>:</li>
+</ol>
+<pre><code class="lang-md">---
+id: newly-created-doc
+<span class="hljs-section">title: This Doc Needs To Be Edited
+---</span>
+
+My new content here..
+</code></pre>
+<ol>
+<li>Refer to that doc&apos;s ID in an existing sidebar in <code>website/sidebar.json</code>:</li>
+</ol>
+<pre><code class="lang-javascript"><span class="pl-c">// Add newly-created-doc to the Getting Started category of docs</span>
+{
+  <span class="pl-s">&quot;docs&quot;</span>: {
+    <span class="pl-s">&quot;Getting Started&quot;</span>: [
+      <span class="pl-s">&quot;quick-start&quot;</span>,
+      <span class="pl-s">&quot;newly-created-doc&quot;</span> <span class="pl-c">// new doc here</span>
+    ],
+    ...
+  },
+  ...
+}
+</code></pre>
+<p>For more information about adding new docs, click <a href="https://docusaurus.io/docs/en/navigation">here</a></p>
+<h2 id="adding-a-new-blog-post">Adding a new blog post</h2>
+<ol>
+<li>Make sure there is a header link to your blog in <code>website/siteConfig.js</code>:</li>
+</ol>
+<p><code>website/siteConfig.js</code></p>
+<pre><code class="lang-javascript">headerLinks: [
+    ...
+    { <span class="hljs-attr">blog</span>: <span class="pl-c1">true</span>, <span class="hljs-attr">label</span>: <span class="pl-s">&apos;Blog&apos;</span> },
+    ...
+]
+</code></pre>
+<ol start="2">
+<li>Create the blog post with the format <code>YYYY-MM-DD-My-Blog-Post-Title.md</code> in <code>website/blog</code>:</li>
+</ol>
+<p><code>website/blog/2018-05-21-New-Blog-Post.md</code></p>
+<pre><code class="lang-markdown">---
+author: Frank Li
+authorURL: https://twitter.com/foobarbaz
+authorFBID: 503283835
+<span class="hljs-section">title: New Blog Post
+---</span>
+
+Lorem Ipsum...
+</code></pre>
+<p>For more information about blog posts, click <a href="https://docusaurus.io/docs/en/adding-blog">here</a></p>
+<h2 id="adding-items-to-your-site&apos;s-top-navigation-bar">Adding items to your site&apos;s top navigation bar</h2>
+<ol>
+<li>Add links to docs, custom pages or external links by editing the headerLinks field of <code>website/siteConfig.js</code>:</li>
+</ol>
+<p><code>website/siteConfig.js</code></p>
+<pre><code class="lang-javascript">{
+  <span class="hljs-attr">headerLinks</span>: [
+    ...
+    <span class="pl-c">/* you can add docs */</span>
+    { <span class="hljs-attr">doc</span>: <span class="pl-s">&apos;my-examples&apos;</span>, <span class="hljs-attr">label</span>: <span class="pl-s">&apos;Examples&apos;</span> },
+    <span class="pl-c">/* you can add custom pages */</span>
+    { <span class="hljs-attr">page</span>: <span class="pl-s">&apos;help&apos;</span>, <span class="hljs-attr">label</span>: <span class="pl-s">&apos;Help&apos;</span> },
+    <span class="pl-c">/* you can add external links */</span>
+    { <span class="hljs-attr">href</span>: <span class="pl-s">&apos;https://github.com/facebook/Docusaurus&apos;</span>, <span class="hljs-attr">label</span>: <span class="pl-s">&apos;GitHub&apos;</span> },
+    ...
+  ],
+  ...
+}
+</code></pre>
+<p>For more information about the navigation bar, click <a href="https://docusaurus.io/docs/en/navigation">here</a></p>
+<h2 id="adding-custom-pages">Adding custom pages</h2>
+<ol>
+<li>Docusaurus uses React components to build pages. The components are saved as .js files in <code>website/pages/en</code>:</li>
+<li>If you want your page to show up in your navigation header, you will need to update <code>website/siteConfig.js</code> to add to the <code>headerLinks</code> element:</li>
+</ol>
+<p><code>website/siteConfig.js</code></p>
+<pre><code class="lang-javascript">{
+  <span class="hljs-attr">headerLinks</span>: [
+    ...
+    { <span class="hljs-attr">page</span>: <span class="pl-s">&apos;my-new-custom-page&apos;</span>, <span class="hljs-attr">label</span>: <span class="pl-s">&apos;My New Custom Page&apos;</span> },
+    ...
+  ],
+  ...
+}
+</code></pre>
+<p>For more information about custom pages, click <a href="https://docusaurus.io/docs/en/custom-pages">here</a>.</p>
+<h1 id="full-documentation">Full Documentation</h1>
+<p>Full documentation can be found on the <a href="https://docusaurus.io/">website</a>.</p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

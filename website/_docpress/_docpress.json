@@ -1,0 +1,98 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "What's In This Document",
+        "source": "README.md",
+        "expand": true,
+        "url": "index.html",
+        "slug": "index",
+        "headings": [
+          {
+            "title": "Directory Structure",
+            "depth": 2,
+            "id": "directory-structure"
+          },
+          {
+            "title": "Editing an existing docs page",
+            "depth": 2,
+            "id": "editing-an-existing-docs-page"
+          },
+          {
+            "title": "Editing an existing blog post",
+            "depth": 2,
+            "id": "editing-an-existing-blog-post"
+          },
+          {
+            "title": "Adding a new docs page to an existing sidebar",
+            "depth": 2,
+            "id": "adding-a-new-docs-page-to-an-existing-sidebar"
+          },
+          {
+            "title": "Adding a new blog post",
+            "depth": 2,
+            "id": "adding-a-new-blog-post"
+          },
+          {
+            "title": "Adding items to your site's top navigation bar",
+            "depth": 2,
+            "id": "adding-items-to-your-site's-top-navigation-bar"
+          },
+          {
+            "title": "Adding custom pages",
+            "depth": 2,
+            "id": "adding-custom-pages"
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "README.md",
+      "title": "What's In This Document",
+      "pageTitle": "What's In This Document",
+      "slug": "index",
+      "headings": [
+        {
+          "title": "Directory Structure",
+          "depth": 2,
+          "id": "directory-structure"
+        },
+        {
+          "title": "Editing an existing docs page",
+          "depth": 2,
+          "id": "editing-an-existing-docs-page"
+        },
+        {
+          "title": "Editing an existing blog post",
+          "depth": 2,
+          "id": "editing-an-existing-blog-post"
+        },
+        {
+          "title": "Adding a new docs page to an existing sidebar",
+          "depth": 2,
+          "id": "adding-a-new-docs-page-to-an-existing-sidebar"
+        },
+        {
+          "title": "Adding a new blog post",
+          "depth": 2,
+          "id": "adding-a-new-blog-post"
+        },
+        {
+          "title": "Adding items to your site's top navigation bar",
+          "depth": 2,
+          "id": "adding-items-to-your-site's-top-navigation-bar"
+        },
+        {
+          "title": "Adding custom pages",
+          "depth": 2,
+          "id": "adding-custom-pages"
+        }
+      ]
+    }
+  },
+  "sources": {
+    "README.md": "index.html"
+  }
+}
