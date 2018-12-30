@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --mode development ",
     "dev": "webpack --mode development --output ./dist/leaf.js",
     "build": "webpack --mode production --output ./dist/leaf.js",
-    "docs-build":"gitbook build docs/ dist/docs",
+    "docs-build": "cp -r docs/. public",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
