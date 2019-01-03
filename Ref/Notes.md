@@ -1506,7 +1506,7 @@ return lowerRate + higherRate;
 }
 As you can see the benefit of using arrow functions is lost when using it in a longer function. Arrow functions are a better fit for short and anonymous functions.
 
-#1. Can you name two programming paradigms important for JavaScript app developers?
+# 1. Can you name two programming paradigms important for JavaScript app developers?
 JavaScript is a multi-paradigm language, supporting imperative/procedural programming along with OOP (Object-Oriented Programming) and functional programming. JavaScript supports OOP with prototypal inheritance.
 
 Good to hear:
@@ -1521,7 +1521,7 @@ Learn More:
 The Two Pillars of JavaScript Part 1 — Prototypal OO.
 The Two Pillars of JavaScript Part 2 — Functional Programming.
 
-#2. What is functional programming?
+# 2. What is functional programming?
 Functional programming produces programs by composing mathematical functions and avoids shared state & mutable data. Lisp (specified in 1958) was among the first languages to support functional programming, and was heavily inspired by lambda calculus. Lisp and many Lisp family languages are still in common use today.
 
 Functional programming is an essential concept in JavaScript (one of the two pillars of JavaScript). Several common functional utilities were added to JavaScript in ES5.
@@ -1545,7 +1545,7 @@ The Dao of Immutability.
 Composing Software.
 The Haskell School of Music.
 
-#3. What is the difference between classical inheritance and prototypal inheritance?
+# 3. What is the difference between classical inheritance and prototypal inheritance?
 Class Inheritance: instances inherit from classes (like a blueprint — a description of the class), and create sub-class relationships: hierarchical class taxonomies. Instances are typically instantiated via constructor functions with the `new` keyword. Class inheritance may or may not use the `class` keyword from ES6.
 
 Prototypal Inheritance: instances inherit directly from other objects. Instances are typically instantiated via factory functions or `Object.create()`. Instances may be composed from many different objects, allowing for easy selective inheritance.
@@ -1598,7 +1598,7 @@ Learn More:
 The Two Pillars of JavaScript Part 1 — Prototypal OO.
 The Two Pillars of JavaScript Part 2 — Functional Programming.
 
-#5. When is classical inheritance an appropriate choice?
+# 5. When is classical inheritance an appropriate choice?
 The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are an anti-pattern. I’ve been issuing this challenge for years, and the only answers I’ve ever heard fall into one of several common misconceptions. More frequently, the challenge is met with silence.
 
 “If a feature is sometimes useful
@@ -1616,7 +1616,7 @@ Learn More:
 The Two Pillars of JavaScript Part 1 — Prototypal OO.
 JS Objects — Inherited a Mess.
 
-#6. When is prototypal inheritance an appropriate choice?
+# 6. When is prototypal inheritance an appropriate choice?
 There is more than one type of prototypal inheritance:
 
 Delegation (i.e., the prototype chain).
@@ -1637,7 +1637,7 @@ Learn More:
 
 “Programming JavaScript Applications”: Prototypes section.
 
-#7. What does “favor object composition over class inheritance” mean?
+# 7. What does “favor object composition over class inheritance” mean?
 This is a quote from “Design Patterns: Elements of Reusable Object-Oriented Software”. It means that code reuse should be achieved by assembling smaller units of functionality into new objects instead of inheriting from classes and creating object taxonomies.
 
 In other words, use can-do, has-a, or uses-a relationships instead of is-a relationships.
@@ -1664,7 +1664,7 @@ Move Over, `class`:
 Composable Factory Functions Are Here
 medium.com	
 
-#8. What are two-way data binding and one-way data flow, and how are they different?
+# 8. What are two-way data binding and one-way data flow, and how are they different?
 Two way data binding means that UI fields are bound to model data dynamically such that when a UI field changes, the model data changes with it and vice-versa.
 
 One way data flow means that the model is the single source of truth. Changes in the UI trigger messages that signal user intent to the model (or “store” in React). Only the model has the access to change the app’s state. The effect is that data always flows in a single direction, which makes it easier to understand.
@@ -1681,7 +1681,7 @@ No understanding of what either one means. Unable to articulate the difference.
 Learn more:
 
 
-#9. What are the pros and cons of monolithic vs microservice architectures?
+# 9. What are the pros and cons of monolithic vs microservice architectures?
 A monolithic architecture means that your app is written as one cohesive unit of code whose components are designed to work together, sharing the same memory space and resources.
 
 A microservice architecture means that your app is made up of lots of smaller, independent applications capable of running in their own memory space and scaling independently from each other across potentially many separate machines.
@@ -1720,7 +1720,7 @@ Unaware of the additional performance overhead caused by IPC and network communi
 Too negative about the drawbacks of microservices. Unable to articulate ways in which to decouple monolithic apps such that they’re easy to split into microservices when the time comes.
 Underestimates the advantage of independently scalable microservices.
 
-#10. What is asynchronous programming, and why is it important in JavaScript?
+# 10. What is asynchronous programming, and why is it important in JavaScript?
 Synchronous programming means that, barring conditionals and function calls, code is executed sequentially from top-to-bottom, blocking on long-running tasks such as network requests and disk I/O.
 
 Asynchronous programming means that the engine runs in an event loop. When a blocking operation is needed, the request is started, and the code keeps running without blocking for the result. When the response is ready, an interrupt is fired, which causes an event handler to be run, where the control flow continues. In this way, a single program thread can handle many concurrent operations.
