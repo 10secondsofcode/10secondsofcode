@@ -1246,3 +1246,87 @@ Static class members (properties/methods) are not tied to a specific instance of
 ### Other Answers
 
 * http://flowerszhong.github.io/2013/11/20/javascript-questions.html
+
+## Topics Based 
+
+#spread-vs-rest-operators
+
+Rest parameter: collects all remaining elements into an array.
+When using rest arguments, you are collapsing all remaining arguments of a function into one array:
+
+var [c, ...m] = [1,2,3,4,5]; // m -> [2,3,4,5]
+Here ...m is a collector, it collects the rest of the parameters. Internally when we write:
+
+var [c, ...m] = [1,2,3,4,5]; JavaScript does following
+
+var c = 1,
+    m = [2, 3, 4, 5];
+
+function add(x, y) {
+  return x + y;
+}
+
+add(1, 2, 3, 4, 5) // returns 3
+
+function add(...args) {
+  let result = 0;
+
+  for (let arg of args) result += arg;
+
+  return result
+}
+
+add(1) // returns 1
+add(1,2) // returns 3
+add(1, 2, 3, 4, 5) // returns 15
+
+function xyz(x, y, ...z) {
+  console.log(x, ' ', y); // hey hello
+
+  console.log(z); // ["wassup", "goodmorning", "hi", "howdy"]
+  console.log(z[0]); // wassup
+  console.log(z.length); // 4
+}
+
+xyz("hey", "hello", "wassup", "goodmorning", "hi", "howdy")
+
+Before rest parameters existed, to get all the arguments in a function we used arguments which is an array-likeobject.
+
+function someFunction() {
+  return arguments;
+}
+
+someFunction("joykare", 100, false);
+
+someFunction returns the arguments and their indexes, [Arguments] { '0': 'joykare', '1': 100, '2': false }.
+
+The downside of using the arguments keyword is that, it returns an array-like object; this means you essentially cannot perform any array-methods like; Array.filer, Array.map. Another pitfall, is that we cannot use arguments in arrow functions.
+
+
+#Spread operator: allows iterables( arrays / objects / strings ) to be expanded into single arguments/elements.
+
+The spread operator allows us to expand elements.
+
+you are expanding a single variable into more:
+
+var params = [ "hello", true, 7 ];
+var other = [ 1, 2, ...params ]; // other => [1,2,"hello", true, 7]
+Here, ...params spreads so as to assing all of its elements to other
+
+Internally javaScript does following
+
+var other = [1, 2].concat(params);
+
+const arr = ["Joy", "Wangari", "Warugu"];
+const newArr = ["joykare", ...arr];
+
+const myNames = [...arr, "joykare"];
+
+We can use the spread operator to copy an array.
+
+const arr = [1, 2, 3];
+const arr2 = [...arr];
+
+## Explain how prototypal inheritance works
+This is an extremely common JavaScript interview question. All JavaScript objects have a prototype property, that is a reference to another object. When a property is accessed on an object and if the property is not found on that object, the JavaScript engine looks at the object's prototype, and the prototype's prototype and so on, until it finds the property defined on one of the prototypes or until it reaches the end of the prototype chain. This behavior simulates classical inheritance, but it is really more of delegation than inheritance.
+
