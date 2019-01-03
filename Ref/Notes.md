@@ -1246,7 +1246,7 @@ Static class members (properties/methods) are not tied to a specific instance of
 ### Other Answers
 
 * http://flowerszhong.github.io/2013/11/20/javascript-questions.html
-
+=========================================================================================================
 ## Topics Based 
 
 #spread-vs-rest-operators
@@ -1329,4 +1329,180 @@ const arr2 = [...arr];
 
 ## Explain how prototypal inheritance works
 This is an extremely common JavaScript interview question. All JavaScript objects have a prototype property, that is a reference to another object. When a property is accessed on an object and if the property is not found on that object, the JavaScript engine looks at the object's prototype, and the prototype's prototype and so on, until it finds the property defined on one of the prototypes or until it reaches the end of the prototype chain. This behavior simulates classical inheritance, but it is really more of delegation than inheritance.
+
+#Javascripts:
+
+var -   The scope of a variable declared with the keyword var is its current execution context. 
+Let -   let are block scoped and not function scoped.
+
+#Hoisting functions
+
+Function declarations
+
+hoisted(); // Output: "This function has been hoisted."
+
+function hoisted() {
+  console.log('This function has been hoisted.');
+};
+
+Function expressions
+
+Function expressions, however are not hoisted.
+
+expression(); // Ouput: TypeError: expression is not a function
+
+var expression = function hoisting() {
+  console.log('Will this work?');
+};
+
+
+https://scotch.io/tutorials/understanding-hoisting-in-javascript
+
+async / await
+promises
+callbacks
+
+#Async/await
+
+Async/await is a new way to write asynchronous code. Previous options for asynchronous code are callbacks and promises.
+Async/await is actually built on top of promises. It cannot be used with plain callbacks or node callbacks.
+Async/await is, like promises, non blocking.
+Async/await makes asynchronous code look and behave a little more like synchronous code. This is where all its power lies.
+
+const makeRequest = () =>
+  getJSON()
+    .then(data => {
+      console.log(data)
+      return "done"
+    })
+
+makeRequest()
+
+const makeRequest = async () => {
+  console.log(await getJSON())
+  return "done"
+}
+
+makeRequest()
+
+#closures
+
+A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain. The closure has three scope chains: 
+    - it has access to its own scope (variables defined between its curly brackets).
+    - it has access to the outer function’s variables.
+    - it has access to the global variables.
+
+Closure means that an inner function always has access to the vars and parameters of its outer function, even after the outer function has returned.
+
+Inner function can access variables and parameters of an outer function.
+It is useful in hiding implementation detail in JavaScript.
+
+function showName (firstName, lastName) {
+var nameIntro = "Your name is ";
+    // this inner function has access to the outer function's variables, including the parameter
+function makeFullName () {       
+return nameIntro + firstName + " " + lastName;   
+}
+
+return makeFullName ();
+}
+
+showName ("Michael", "Jackson"); // Your name is Michael Jackson
+
+function OuterFunction() {
+
+    var outerVariable = 100;
+
+    function InnerFunction() {
+        alert(outerVariable);
+    }
+
+    return InnerFunction;
+}
+var innerFunc = OuterFunction();
+
+innerFunc(); // 100
+
+
+function Counter() {
+    var counter = 0;
+
+    function IncreaseCounter() {
+        return counter += 1;
+    };
+
+    return IncreaseCounter;
+}
+
+var counter = Counter();
+alert(counter()); // 1
+alert(counter()); // 2
+alert(counter()); // 3
+alert(counter()); // 4
+
+In the above example, return InnerFunction; returns InnerFunction from OuterFunction when you call OuterFunction(). A variable innerFunc reference the InnerFunction() only, not the OuterFunction(). So now, when you call innerFunc(), it can still access outerVariable which is declared in OuterFunction(). This is called Closure.
+
+#IIFE
+
+IIFE is a function expression that automatically invokes after completion of the definition.
+The parenthesis () plays important role in IIFE pattern.
+use () operator to call this anonymous function immediately after completion of its definition.
+(function () {
+    //write your js code here
+})();
+
+Adcvantages:
+
+Do not create unnecessary global variables and functions
+Functions and variables defined in IIFE do not conflict with other functions & variables even if they have same name.
+Organize JavaScript code.
+Make JavaScript code maintainable.
+
+#this():
+
+The following four rules applies to this in order to know which object is referred by this keyword.
+
+Global Scope
+Object's Method
+call() or apply() method
+bind() method
+
+# Arrow Functions
+Arrow function was introduced in ES6 using a new syntax for declaring functions called the arrow syntax. This new syntax uses less verbose syntax.
+
+Arrow function can easily identified by the arrow symbol ‘ => ’ from where it gets its name. As part the syntax and rules for writing arrow functions is that the parameters come before the arrow element and the main body of the function comes after.
+
+Arrow functions are always anonymous, and you need to assign them to a variable, so you can refer to them.
+
+Advantage
+
+There are numerous advantages of using arrow functions over other function declaration methods:
+
+-They are much less verbose
+-Do not need to use parentheses for single parameters
+-The body of the function does not need to be placed inside a block if it is only one line
+-If the return statement is the only statement in the body of the function, the return keyword is not required
+-They do not bind their own value of this to the function
+
+Example:
+
+const square = x => x*x;
+In this example the ‘x’ did not need to be in parentheses because is only one parameter; multiple parameters needs to go inside parentheses.
+
+Example with two parameters:
+
+const add = (x,y) => x = y;
+But if the function does not require any parameters you can use empty parameters before the arrow symbol:
+
+const hello = ( ) => alert(‘Hello World!’);
+In all these examples the function fits onto one line, so there is no need to put them inside a block. But for longer functions you will require to use curly brackets to define the body of the function and the return keywork at the end.
+
+const tax = (salary) => {
+const taxable = salary – 5000;
+const lowerRate = 0.25 * taxable;
+taxable = taxable -15000;
+const higherRate = 0.4 * taxable;
+return lowerRate + higherRate;
+}
+As you can see the benefit of using arrow functions is lost when using it in a longer function. Arrow functions are a better fit for short and anonymous functions.
 
