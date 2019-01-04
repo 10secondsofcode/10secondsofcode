@@ -2506,3 +2506,86 @@ When using `translate()`, the element still occupies its original space (sort of
 * https://quizlet.com/28293152/front-end-interview-questions-css-flash-cards/
 * http://peterdoes.it/2015/12/03/a-personal-exercise-front-end-job-interview-questions-and-my-answers-all/
 
+# High Order Functiions:
+
+A higher-order function is a function that can take another function as an argument, or that returns a function as a result.
+A Higher-Order function is a function that receives a function as an argument or returns the function as output.
+
+let total = 0, count = 1;
+while (count <= 10) {
+  total += count;
+  count += 1;
+}
+console.log(total);
+
+console.log(sum(range(1, 10)));
+it is using below high order functions like .filter(), .map() and .reduce()
+
+Let’s say we have an array of numbers and we want to create a new array which contains double of each value of the first array. 
+
+Without Higher-order function
+
+const arr1 = [1, 2, 3];
+const arr2 = [];
+for(let i = 0; i < arr1.length; i++) {
+  arr2.push(arr1[i] * 2);
+}
+// prints [ 2, 4, 6 ]
+console.log(arr2);
+With Higher-order function map
+
+const arr1 = [1, 2, 3];
+const arr2 = arr1.map(function(item) {
+  return item * 2;
+});
+console.log(arr2);
+
+The filter() method creates a new array with all elements that pass the test provided by the callback function. 
+
+const persons = [
+  { name: 'Peter', age: 16 },
+  { name: 'Mark', age: 18 },
+  { name: 'John', age: 27 },
+  { name: 'Jane', age: 14 },
+  { name: 'Tony', age: 24},
+];
+const fullAge = [];
+for(let i = 0; i < persons.length; i++) {
+  if(persons[i].age >= 18) {
+    fullAge.push(persons[i]);
+  }
+}
+console.log(fullAge);
+
+With Higher-order function filter
+
+const persons = [
+  { name: 'Peter', age: 16 },
+  { name: 'Mark', age: 18 },
+  { name: 'John', age: 27 },
+  { name: 'Jane', age: 14 },
+  { name: 'Tony', age: 24},
+];
+const fullAge = persons.filter(person => person.age >= 18);
+console.log(fullAge);
+
+The reduce method executes the callback function on each member of the calling array which results in a single output value. 
+
+With Higher-order function reduce
+
+const arr = [5, 7, 1, 8, 4];
+const sum = arr.reduce(function(accumulator, currentValue) {
+  return accumulator + currentValue;
+});
+// prints 25
+console.log(sum);
+
+Without Higher-order function
+
+const arr = [5, 7, 1, 8, 4];
+let sum = 0;
+for(let i = 0; i < arr.length; i++) {
+  sum = sum + arr[i];
+}
+// prints 25
+console.log(sum);
