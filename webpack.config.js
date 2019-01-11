@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
   module: {
     rules: [
@@ -17,6 +18,21 @@ module.exports = {
             loader: "html-loader",
             options: { minimize: true }
           }
+        ]
+      },
+      {
+        test: /\.md$/,
+        use: [
+            {
+                loader: "html-loader"
+            },
+            {
+                loader: "markdown-loader",
+                options: {
+                  pedantic: true,
+                  renderer
+              }
+            }
         ]
       },
       {
