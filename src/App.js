@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment, Component } from "react";
 import { Button } from 'reactstrap';
 
 import Navigation from './Components/Navigation';
@@ -6,6 +6,13 @@ import Main from './Components/Main';
 import Herocontent from './Components/Herocontent';
 import ReactMarkdown from 'react-markdown';
 import AppMarkdown from '../README.md';
+
+const importAll = (r) => r.keys().map(r);
+const markdownFiles = importAll(require.context('../docs', false, /\.md$/))
+  .sort()
+  .reverse();
+
+console.log("markdownFiles====>"+markdownFiles);
 
 class App extends React.Component {
   constructor(props){
@@ -19,7 +26,7 @@ class App extends React.Component {
   }
   
   componentDidMount() {
-    fetch('../README.md')
+    fetch('../docs/SUMMARY.md')
     .then((resp) => resp.text()) 
     .then(data => {
       this.setState(
@@ -46,11 +53,25 @@ class App extends React.Component {
       <div>
         <Navigation />
         <Herocontent />
-        <ReactMarkdown source={markdown} />
         <Main />
+        <Fragment>
+          <section className="section">
+            <div className="container">
+              <div className="card">
+                <div className="card-content">
+                  <div className="content">
+                    <ReactMarkdown source={markdown} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </Fragment>
       </div>
     );
   }
 }
 
 export default App;
+
+//https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
