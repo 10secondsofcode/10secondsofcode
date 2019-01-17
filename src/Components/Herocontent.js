@@ -1,9 +1,8 @@
-
 import React from 'react';
 
 const Herocontent = () => (
   <div className="main thememain-blue">
-    <div className="container main hero-content-main    ">
+    <div className="container main hero-content-main">
       <div className="col-12">
         <h1 className="theme-text">The Modern ReactJS Tutorial</h1>
         <p className="theme-text">
