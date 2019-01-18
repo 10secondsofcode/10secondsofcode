@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const marked = require("marked");
 
 module.exports = {
   module: {
@@ -30,7 +31,7 @@ module.exports = {
                 loader: "markdown-loader",
                 options: {
                   pedantic: true,
-                  renderer
+                  renderer: new marked.Renderer()
               }
             }
         ]
