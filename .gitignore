@@ -2,3 +2,4 @@
 node_modules
 dist
 _docpress
+yarn.lock
