@@ -12,7 +12,7 @@ const markdownFiles = importAll(require.context('../docs', false, /\.md$/))
   .sort()
   .reverse();
 
-console.log("markdownFiles====>"+markdownFiles);
+//console.log("markdownFiles====>"+markdownFiles);
 
 class App extends React.Component {
   constructor(props){
@@ -26,13 +26,12 @@ class App extends React.Component {
   }
   
   componentDidMount() {
-    fetch('../docs/SUMMARY.md')
-    .then((resp) => resp.text()) 
-    .then(data => {
-      this.setState(
-        { markdown: data }
-      );
-    });
+    console.log(markdownFiles);
+    const markdown = Promise.all(markdownFiles.map(
+      (file) => fetch(file).then((res) => res.text())
+    )).catch((err) => console.error(err));
+
+    this.setState((state) => ({ ...state, markdown }));
   }
 
   increment() {
