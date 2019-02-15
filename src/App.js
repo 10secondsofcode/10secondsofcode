@@ -7,30 +7,11 @@ import Herocontent from './Components/Herocontent';
 import ReactMarkdown from 'react-markdown';
 import AppMarkdown from '../README.md';
 
-// const importAll = (r) => r.keys().map(r);
-// const markdownFiles = importAll(require.context('../docs', false, /\.md$/))
-//   .sort()
-//   .reverse();
-
-//console.log("markdownFiles====>"+markdownFiles);
-
-// const markdownContext = require.context('../docs', false, /\.md$/);
-// console.log(markdownContext.keys());
-
-// function importAll (r) {
-//   r.keys().forEach(r);
-// }
-
-/* importAll(require.context('../docs/', true, /\.js$/));
-
 const markdownContext = require.context('../docs', false, /\.md$/);
 const markdownFiles = markdownContext
   .keys()
-  .map((filename) => markdownContext(filename))
-console.log(markdownFiles); */
-
-const importAll = (r) => r.keys().map(r);
-const markdownFiles = importAll(require.context('../docs/', false, /\.md$/));
+  //.map((filename) => markdownContext(filename))
+console.log("hey"+markdownFiles); 
 
 class App extends React.Component {
   constructor(props){
@@ -39,32 +20,45 @@ class App extends React.Component {
       count : 5,
       posts: ''
     }
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
   }
   
-   async componentDidMount() {
-    console.log(markdownFiles);
-    const posts = markdownFiles
+  componentDidMount() {
+    console.log("mark files===>"+markdownFiles);
+    var newPosts = [];
+    const posts = markdownFiles.forEach(
+                    (file, key  ) => {
+                      newPosts.push({
+                        id: key, 
+                        data:  "."+file
+                      });
+                    }
+                  );
 
-    this.setState((state) => ({ ...state, posts }));
-  }
-
-  increment() {
-    this.setState(
-      {count : this.state.count+1}
-    );
-  }
-  
-  decrement() {
-    this.setState(
-      {count : this.state.count-1}
-    );
+  console.log("posts array value ==>"+JSON.stringify(newPosts))
+    const posts1 = Promise.all(
+                      newPosts.forEach(
+                          (file, key  ) => {
+                            console.log("---> "+file.data+" ,==="+key)
+                              fetch(file.data)
+                              .then( res => res.text() )
+                              .then( 
+                                text =>
+                                {
+                                  console.log("text===>"+text);
+                                  //this.setState({ posts1: text });
+                                }
+                              )
+                            }
+                          )
+                        ) ;                   
+    //console.log("posts array value ==>"+JSON.stringify(posts1))
+    //console.log("posts array value ==>"+JSON.stringify(newPosts))
+    //this.setState((state) => ({ ...state, posts }));
   }
 
   render() {  
-    const { posts } = this.state;
-    //console.log("post===>"+posts);
+    //const { newPosts } = this.state;
+    //console.log("posts array value ==>"+JSON.stringify(newPosts))
     return (
       <div>
         <Navigation />
@@ -77,10 +71,10 @@ class App extends React.Component {
                 <div className="card-content">
                   <div className="content">
                     {
-                      //posts.map((post, idx) => (
-                        <ReactMarkdown source={posts} />
-                      //))
-                    }
+                      //newPosts.map((post, idx) => (
+                        
+                      // ))
+                    } 
                   </div>
                 </div>
               </div>
