@@ -7,31 +7,47 @@ import Herocontent from './Components/Herocontent';
 import ReactMarkdown from 'react-markdown';
 import AppMarkdown from '../README.md';
 
-const importAll = (r) => r.keys().map(r);
-const markdownFiles = importAll(require.context('../docs', false, /\.md$/))
-  .sort()
-  .reverse();
+// const importAll = (r) => r.keys().map(r);
+// const markdownFiles = importAll(require.context('../docs', false, /\.md$/))
+//   .sort()
+//   .reverse();
 
 //console.log("markdownFiles====>"+markdownFiles);
+
+// const markdownContext = require.context('../docs', false, /\.md$/);
+// console.log(markdownContext.keys());
+
+// function importAll (r) {
+//   r.keys().forEach(r);
+// }
+
+/* importAll(require.context('../docs/', true, /\.js$/));
+
+const markdownContext = require.context('../docs', false, /\.md$/);
+const markdownFiles = markdownContext
+  .keys()
+  .map((filename) => markdownContext(filename))
+console.log(markdownFiles); */
+
+const importAll = (r) => r.keys().map(r);
+const markdownFiles = importAll(require.context('../docs/', false, /\.md$/));
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       count : 5,
-      markdown: ''
+      posts: ''
     }
     this.increment = this.increment.bind(this);
     this.decrement = this.decrement.bind(this);
   }
   
-  componentDidMount() {
+   async componentDidMount() {
     console.log(markdownFiles);
-    const markdown = Promise.all(markdownFiles.map(
-      (file) => fetch(file).then((res) => res.text())
-    )).catch((err) => console.error(err));
+    const posts = markdownFiles
 
-    this.setState((state) => ({ ...state, markdown }));
+    this.setState((state) => ({ ...state, posts }));
   }
 
   increment() {
@@ -47,7 +63,8 @@ class App extends React.Component {
   }
 
   render() {  
-    const { markdown } = this.state;
+    const { posts } = this.state;
+    //console.log("post===>"+posts);
     return (
       <div>
         <Navigation />
@@ -59,7 +76,11 @@ class App extends React.Component {
               <div className="card">
                 <div className="card-content">
                   <div className="content">
-                    <ReactMarkdown source={markdown} />
+                    {
+                      //posts.map((post, idx) => (
+                        <ReactMarkdown source={posts} />
+                      //))
+                    }
                   </div>
                 </div>
               </div>
