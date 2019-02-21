@@ -11,19 +11,18 @@ const markdownContext = require.context('../docs', false, /\.md$/);
 const markdownFiles = markdownContext
   .keys()
   //.map((filename) => markdownContext(filename))
-console.log("hey"+markdownFiles); 
+//console.log("hey"+markdownFiles); 
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       count : 5,
-      posts: ''
-    }
+      posts1 : []
+    }    
   }
   
   componentDidMount() {
-    console.log("mark files===>"+markdownFiles);
     var newPosts = [];
     const posts = markdownFiles.forEach(
                     (file, key  ) => {
@@ -34,31 +33,52 @@ class App extends React.Component {
                     }
                   );
 
-  console.log("posts array value ==>"+JSON.stringify(newPosts))
-    const posts1 = Promise.all(
-                      newPosts.forEach(
-                          (file, key  ) => {
-                            console.log("---> "+file.data+" ,==="+key)
-                              fetch(file.data)
-                              .then( res => res.text() )
-                              .then( 
-                                text =>
-                                {
-                                  console.log("text===>"+text);
-                                  //this.setState({ posts1: text });
-                                }
-                              )
-                            }
-                          )
-                        ) ;                   
-    //console.log("posts array value ==>"+JSON.stringify(posts1))
-    //console.log("posts array value ==>"+JSON.stringify(newPosts))
-    //this.setState((state) => ({ ...state, posts }));
+    //this.getFileResults(newPosts);         
+    this.apiGetAll("../README.md");       
   }
 
+  async apiGetAll (newPosts) {
+    console.log(newPosts)
+    try {
+      const resp = await fetch(newPosts).then( res => res.text() );
+      
+      const newResp = await Promise.all((resp)).then(result => {
+       console.log("hey--->"+result);
+        this.setState({posts1: result});
+      });
+      console.log("dsffdsf===="+this.state.posts1);
+      return newResp
+    } catch (err) {
+         console.log(err)
+    }
+  }  
+
+  /*getFileResults(newPosts) {
+    let data = [];
+    Promise.all(
+                newPosts.forEach(
+                    (file) => {
+                      fetch(file.data)
+                        .then( res => res.text() )
+                        .then( 
+                          text =>
+                          {
+                            console.log("text===>"+text);
+                            data.push(text);
+                            return data;
+                            //this.setState((state) => ({ ...state, posts1 }));
+                          }
+                        )
+                      }
+                    ) 
+                ).then(result => {
+                  const [ data ] = result;
+                  console.log("hey--->"+result);
+                  
+                });
+  }*/
+
   render() {  
-    //const { newPosts } = this.state;
-    //console.log("posts array value ==>"+JSON.stringify(newPosts))
     return (
       <div>
         <Navigation />
@@ -72,7 +92,7 @@ class App extends React.Component {
                   <div className="content">
                     {
                       //newPosts.map((post, idx) => (
-                        
+                        this.state.posts1
                       // ))
                     } 
                   </div>
