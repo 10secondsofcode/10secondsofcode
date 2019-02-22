@@ -33,23 +33,37 @@ class App extends React.Component {
                     }
                   );
 
-    //this.getFileResults(newPosts);         
-    this.apiGetAll("../README.md");       
+    newPosts.map(
+                  (post) => 
+                  {
+                    let a =10;
+                    console.log("new values===>"+post.data);
+                    let av = this.apiGetAll(post.data);
+                    console.log("json--->"+JSON.stringify(av));
+                  }
+                );    
+    //this.apiGetAll(newPosts["data"]);
+    return false;
   }
 
   async apiGetAll (newPosts) {
-    console.log(newPosts)
+    let cc = [];
     try {
       const resp = await fetch(newPosts).then( res => res.text() );
-      
-      const newResp = await Promise.all((resp)).then(result => {
+      console.log("fetch---"+resp);
+      cc.push({
+        data : resp
+      });
+      console.log("json--->"+JSON.stringify(cc));
+      /* const newResp = await Promise.all((resp)).then(result => {
        console.log("hey--->"+result);
         this.setState({posts1: result});
-      });
-      console.log("dsffdsf===="+this.state.posts1);
-      return newResp
+      });*/
+      // this.setState({posts1: resp});
+      // console.log("dsffdsf===="+this.state.posts1);
+      return resp;
     } catch (err) {
-         console.log(err)
+      console.log(err);
     }
   }  
 
@@ -92,9 +106,10 @@ class App extends React.Component {
                   <div className="content">
                     {
                       //newPosts.map((post, idx) => (
-                        this.state.posts1
+                      // this.state.posts1
                       // ))
                     } 
+                    <ReactMarkdown source={this.state.posts1} />
                   </div>
                 </div>
               </div>
