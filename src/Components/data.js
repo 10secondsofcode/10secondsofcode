@@ -1,8 +1,8 @@
-export const title = 
+/*export const title = 
 {
     "Javascript": {
         "introduction": {
-            "javascript objects" : "javascript objects",
+            "Javascript Objects" : "Javascript Objects",
             "Prototypal inheritance":"Prototypal inheritance",
             "Scoping and hosting":"Scoping and hosting",
             "Closures":"Closures",
@@ -22,5 +22,123 @@ export const title =
             "Singleton":"Singleton"
         }	
     }
-};
+}; */
 
+export const titleMetaData =
+[
+    {
+        "labelTitle": "Introduction",
+        "topics": [
+            {
+                "id": "javascript-objects",
+                "title": "Javascript Objects",
+                "url": "javascript-objects"
+            },
+            {
+                "id": "prototypal-inheritance",
+                "title": "Prototypal Inheritance",
+                "url": "prototypal-inheritance"
+            },
+            {
+                "id": "scoping-and-hosting",
+                "title": "Scoping and hosting",
+                "url": "scoping-and-hosting"
+            },
+            {
+                "id": "javascript-objects",
+                "title": "Javascript Objects",
+                "url": "javascript-objects"
+            },
+            {
+                "id": "prototypal-inheritance",
+                "title": "Prototypal Inheritance",
+                "url": "prototypal-inheritance"
+            },
+            {
+                "id": "scoping-and-hosting",
+                "title": "Scoping and hosting",
+                "url": "scoping-and-hosting"
+            },
+            {
+                "id": "javascript-objects",
+                "title": "Javascript Objects",
+                "url": "javascript-objects"
+            },
+            {
+                "id": "prototypal-inheritance",
+                "title": "Prototypal Inheritance",
+                "url": "prototypal-inheritance"
+            },
+            {
+                "id": "scoping-and-hosting",
+                "title": "Scoping and hosting",
+                "url": "scoping-and-hosting"
+            },
+            {
+                "id": "javascript-objects",
+                "title": "Javascript Objects",
+                "url": "javascript-objects"
+            },
+            {
+                "id": "prototypal-inheritance",
+                "title": "Prototypal Inheritance",
+                "url": "prototypal-inheritance"
+            },
+            {
+                "id": "scoping-and-hosting",
+                "title": "Scoping and hosting",
+                "url": "scoping-and-hosting"
+            }
+        ]
+    },
+    {
+        "labelTitle": "Design Pattern",
+        "topics": [
+            {
+                "id": "decorator",
+                "title": "Decorator",
+                "url": "decorator"
+            },
+            {
+                "id": "factory",
+                "title": "Factory",
+                "url": "factory"
+            },
+            {
+                "id": "singleton",
+                "title": "Singleton",
+                "url": "singleton"
+            },
+            {
+                "id": "decorator",
+                "title": "Decorator",
+                "url": "decorator"
+            },
+            {
+                "id": "factory",
+                "title": "Factory",
+                "url": "factory"
+            },
+            {
+                "id": "singleton",
+                "title": "Singleton",
+                "url": "singleton"
+            },
+            {
+                "id": "decorator",
+                "title": "Decorator",
+                "url": "decorator"
+            },
+            {
+                "id": "factory",
+                "title": "Factory",
+                "url": "factory"
+            },
+            {
+                "id": "singleton",
+                "title": "Singleton",
+                "url": "singleton"
+            }
+        ]
+    }
+];
