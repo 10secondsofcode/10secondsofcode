@@ -45,29 +45,34 @@ export const titleMetaData =
                 "url": "scoping-and-hosting"
             },
             {
-                "id": "javascript-objects",
-                "title": "Javascript Objects",
-                "url": "javascript-objects"
+                "id": "javascript-closures",
+                "title": "Closures",
+                "url": "javascript-closures"
             },
             {
-                "id": "prototypal-inheritance",
-                "title": "Prototypal Inheritance",
-                "url": "prototypal-inheritance"
+                "id": "javaScript-higher-order-functions",
+                "title": "JavaScript Higher-Order Functions",
+                "url": "javaScript-higher-order-functions"
             },
             {
-                "id": "scoping-and-hosting",
-                "title": "Scoping and hosting",
-                "url": "scoping-and-hosting"
+                "id": "apply-call-and-bind",
+                "title": "Apply, call, and bind",
+                "url": "apply-call-and-bind"
             },
             {
-                "id": "javascript-objects",
-                "title": "Javascript Objects",
-                "url": "javascript-objects"
+                "id": "javascript-asynchronous-functions",
+                "title": "Callbacks and promises, async/await",
+                "url": "javascript-asynchronous-functions"
             },
             {
-                "id": "prototypal-inheritance",
-                "title": "Prototypal Inheritance",
-                "url": "prototypal-inheritance"
+                "id": "javascript-array-functions",
+                "title": "Javascript Array Functions",
+                "url": "javascript-array-functions"
+            },
+            {
+                "id": "javascript-string-functions",
+                "title": "Javascript String Functions",
+                "url": "javascript-string-functions"
             },
             {
                 "id": "scoping-and-hosting",
