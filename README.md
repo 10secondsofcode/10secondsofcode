@@ -1,9 +1,7 @@
 
 # 10secondsofcode 
-10secondsofcode is a easy way to understand the reactjs snippets in 10 seconds. 
-## Acknowledgments
+10secondsofcode is a easy way to understand the javascript and reactjs snippets in 10 seconds. 
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+## Website 
+https://10secondsofcode.com
 
