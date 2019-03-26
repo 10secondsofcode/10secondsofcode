@@ -69,6 +69,9 @@
 
 .content-main li{
     padding-bottom: 5px;
+    padding-left: 15px;
+    width:33%;
+    display: inline-flex !important;
 }
 
 .theme-text a{
