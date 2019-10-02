@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 import { Button } from 'reactstrap';
-
+import { BrowserRouter, Route } from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import Main from './Components/Main';
 import Herocontent from './Components/Herocontent';
@@ -10,51 +10,50 @@ import AppMarkdown from '../README.md';
 const markdownContext = require.context('../docs', false, /\.md$/);
 const markdownFiles = markdownContext
   .keys()
-  //.map((filename) => markdownContext(filename))
+//.map((filename) => markdownContext(filename))
 //console.log("hey"+markdownFiles); 
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      count : 5,
-      posts1 : []
-    }    
+      count: 5,
+      posts1: []
+    }
   }
-  
+
   componentDidMount() {
     var newPosts = [];
     const posts = markdownFiles.forEach(
-                    (file, key  ) => {
-                      newPosts.push({
-                        id: key, 
-                        data:  "."+file
-                      });
-                    }
-                  );
+      (file, key) => {
+        newPosts.push({
+          id: key,
+          data: "." + file
+        });
+      }
+    );
 
     newPosts.map(
-                  (post) => 
-                  {
-                    let a =10;
-                    console.log("new values===>"+post.data);
-                    let av = this.apiGetAll(post.data);
-                    console.log("json--->"+JSON.stringify(av));
-                  }
-                );    
+      (post) => {
+        let a = 10;
+        console.log("new values===>" + post.data);
+        let av = this.apiGetAll(post.data);
+        console.log("json--->" + JSON.stringify(av));
+      }
+    );
     //this.apiGetAll(newPosts["data"]);
     return false;
   }
 
-  async apiGetAll (newPosts) {
+  async apiGetAll(newPosts) {
     let cc = [];
     try {
-      const resp = await fetch(newPosts).then( res => res.text() );
-      console.log("fetch---"+resp);
+      const resp = await fetch(newPosts).then(res => res.text());
+      console.log("fetch---" + resp);
       cc.push({
-        data : resp
+        data: resp
       });
-      console.log("json--->"+JSON.stringify(cc));
+      console.log("json--->" + JSON.stringify(cc));
       /* const newResp = await Promise.all((resp)).then(result => {
        console.log("hey--->"+result);
         this.setState({posts1: result});
@@ -65,7 +64,7 @@ class App extends React.Component {
     } catch (err) {
       console.log(err);
     }
-  }  
+  }
 
   /*getFileResults(newPosts) {
     let data = [];
@@ -92,30 +91,32 @@ class App extends React.Component {
                 });
   }*/
 
-  render() {  
+  render() {
     return (
       <div>
-        <Navigation />
-        <Herocontent />
-        <Main />
-        <Fragment>
-          <section className="section">
-            <div className="container">
-              <div className="card">
-                <div className="card-content">
-                  <div className="content">
-                    {
-                      //newPosts.map((post, idx) => (
-                      // this.state.posts1
-                      // ))
-                    } 
-                    <ReactMarkdown source={this.state.posts1} />
+        <BrowserRouter>
+          <Navigation />
+          <Herocontent />
+          <Route exact path="/" component={Main} />
+          <Fragment>
+            <section className="section">
+              <div className="container">
+                <div className="card">
+                  <div className="card-content">
+                    <div className="content">
+                      {
+                        //newPosts.map((post, idx) => (
+                        // this.state.posts1
+                        // ))
+                      }
+                      <ReactMarkdown source={this.state.posts1} />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </Fragment>
+            </section>
+          </Fragment>
+        </BrowserRouter>
       </div>
     );
   }
