@@ -60,4 +60,4 @@ When you modified the template you need to add them to the spaces between the "|
 1. [Elangovan Sundar](https://github.com/elangovanshanthi)
 
 [<img src="https://avatars2.githubusercontent.com/u/38432384?s=400&v=4" width="100px;"/><br /><sub><b> Danilo Lira </b></sub>]( https://github.com/DaniloLira )
-2. [Danilo Lira](https://github.com/DaniloLira)
+1. [Danilo Lira](https://github.com/DaniloLira)
