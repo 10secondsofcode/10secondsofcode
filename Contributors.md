@@ -57,11 +57,12 @@ To add your name to the repository contributors, Use this template below:
 When you modified the template you need to add them to the spaces between the "|"
 -->
 
-[<img src="https://avatars0.githubusercontent.com/u/6679438?s=400&v=4" width="100px;"/><br /><sub><b> Elangovan Sundar </b></sub>](https://github.com/elangovanshanthi)
-[<img src="https://avatars0.githubusercontent.com/u/7194904?s=400&v=4" width="100px;"/><br /><sub><b> Kevin Boer </b></sub>](https://github.com/kev1nboer)]
-[<img src="https://avatars0.githubusercontent.com/u/20200403?s=400&v=4" width="100px;"/><br /><sub><b> Fadhil Nur Mahardi </b></sub>]( https://github.com/fadhilnurmahardi )
-1. [Elangovan Sundar](https://github.com/elangovanshanthi)
-2. [Kevin Boer](https://github.com/kev1nboer)
-3. [Fadhil Nur Mahardi](https://github.com/fadhilnurmahardi)
-4. [D'jay](https://github.com/Djay1407)
-5. [jamal](https://github.com/jamaluddinfikri)
+[<img src="https://avatars0.githubusercontent.com/u/6679438?s=400&v=4" width="100px;"/><br /><sub><b> Elangovan Sundar </b></sub>](https://github.com/elangovanshanthi) |
+[<img src="https://avatars0.githubusercontent.com/u/7194904?s=400&v=4" width="100px;"/><br /><sub><b> Kevin Boer </b></sub>](https://github.com/kev1nboer) |
+[<img src="https://avatars0.githubusercontent.com/u/20200403?s=400&v=4" width="100px;"/><br /><sub><b> Fadhil Nur Mahardi </b></sub>]( https://github.com/fadhilnurmahardi ) |
+ [Elangovan Sundar](https://github.com/elangovanshanthi) |
+[Kevin Boer](https://github.com/kev1nboer) |
+ [Fadhil Nur Mahardi](https://github.com/fadhilnurmahardi) |
+[D'jay](https://github.com/Djay1407) |
+[jamal](https://github.com/jamaluddinfikri) |
+[<img src="https://avatars0.githubusercontent.com/u/32081469?s=460&v=4"/><br /><sub><b> hilary </b></sub>](https://github.com/hwilson2563) 
