@@ -92,3 +92,12 @@
 .search-content{
     margin-top:15px;
 }
+
+.btn-login {
+    background-color: #4d9c4e;
+    color: #fff;
+}
+
+.auth-form {
+    padding: 30px;
+}
