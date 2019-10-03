@@ -1,4 +1,4 @@
-# Contributing
+﻿# Contributing
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or create ticket or any other method with the owners of this repository before making a change.
@@ -64,4 +64,5 @@ When you modified the template you need to add them to the spaces between the "|
 2. [Kevin Boer](https://github.com/kev1nboer)
 3. [Fadhil Nur Mahardi](https://github.com/fadhilnurmahardi)
 4. [D'jay](https://github.com/Djay1407)
+[<img src="https://avatars0.githubusercontent.com/u/30727223?s=460&v=4" width="100px;"/><br /><sub><b> Frank S Pelletier (Veltaine) </b></sub>](https://github.com/veltaine)
 
