@@ -3,6 +3,7 @@ import { Button } from 'reactstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import Main from './Components/Main';
+import Login from './Components/login';
 import Herocontent from './Components/Herocontent';
 import ReactMarkdown from 'react-markdown';
 import AppMarkdown from '../README.md';
@@ -96,8 +97,8 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <Navigation />
-          <Herocontent />
-          <Route exact path="/" component={Main} />
+          <Route exact path="/" component={Herocontent} />
+          <Route path="/login" component={Login} />
           <Fragment>
             <section className="section">
               <div className="container">

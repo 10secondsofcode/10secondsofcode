@@ -117,6 +117,20 @@
   line-height: 1.5;
 }
 
+
+.search-content{
+    margin-top:15px;
+}
+
+.btn-login {
+    background-color: #4d9c4e;
+    color: #fff;
+}
+
+.auth-form {
+    padding: 30px;
+}
+
 .banner-text p {
   font-size: 17px !important;
   line-height: 1.5;
