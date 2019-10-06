@@ -39,19 +39,20 @@ const Navigation = () => {
               <input className="form-control mr-sm-2" type="search" placeholder="Search" />
               <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
+            <button
+              className="btn btn-outline-success btn-sm d-block h-75 mr-3"
+              type="button"
+              onClick={() => changemode()}
+              style={{ marginLeft: "12px" }}
+            >
+              Switch to {currentmode}
+            </button>
             <Link to="/login">
               <button className="btn btn-login ml-2">Login</button>
             </Link>
           </div>
         </nav>
       </div>
-      <button
-        className="btn btn-outline-success btn-sm d-block h-75 mr-3"
-        type="button"
-        onClick={() => changemode()}
-      >
-        Switch to {currentmode}
-      </button>
     </div>
   );
 };
