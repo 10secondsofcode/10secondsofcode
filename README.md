@@ -9,7 +9,7 @@ https://10secondsofcode.com
 Follow these steps to make your first pull request-
   1. Fork this repository.
   2. Clone your forked repository to your local machine.
-  3. Add your name in Contributors.md file.
+  3. Take any one of issues from issues list and created the PR.
   4. Write these command on your terminal-
   ```
   git add -A
