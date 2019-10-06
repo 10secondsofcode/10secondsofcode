@@ -1,9 +1,9 @@
 
 # 10secondsofcode 
-10secondsofcode is a easy way to understand the javascript and reactjs snippets in 10 seconds. 
+10secondsofcode is a easy way to understand the JavaScript and ReactJS snippets in 10 seconds. 
 
 ## Website 
-https://10secondsofcode.com
+https://10seconds.netlify.com/
 
 # Welcome to HacktoberFest 2019!
 Follow these steps to make your first pull request-
