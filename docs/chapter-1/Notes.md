@@ -98,6 +98,8 @@ Revealing module
 Facade
 Observer
 MVC, MVP, MVVM
+Builder
+Prototype
 
 https://medium.freecodecamp.org/cracking-the-front-end-interview-9a34cd46237
 
