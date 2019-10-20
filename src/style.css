@@ -37,6 +37,10 @@
   background: #fff;
 }
 
+.thememain-white h3 {
+  color: #333;
+}
+
 .thememain-white .thememain-header {
   background: linear-gradient(165deg, #6e60cc, #484389);
   color: #fff;

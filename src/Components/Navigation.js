@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const Navigation = () => {
+const Navigation = (props) => {
   const [currentmode, changeState] = React.useState("Light Mode");
   const DocBody = document.getElementById("Apptheme");
   const changemode = () => {
     currentmode === "Light Mode"
-      ? ((DocBody.className = "thememain-dark"), changeState("Dark Mode"))
-      : ((DocBody.className = "thememain-white "), changeState("Light Mode"));
+      ? ((DocBody.className = "thememain-dark"), changeState("Dark Mode"), props.dark(true))
+      : ((DocBody.className = "thememain-white "), changeState("Light Mode"), props.dark(false));
   };
   return (
     <div className="main thememain-header">
