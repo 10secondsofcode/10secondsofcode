@@ -19,8 +19,15 @@ class App extends React.Component {
     super(props);
     this.state = {
       count: 5,
-      posts1: []
+      posts1: [],
+      isDark: false
     }
+  }
+
+  isDarkTheme = (dark) => {
+    this.setState({
+      isDark: dark
+    })
   }
 
   componentDidMount() {
@@ -96,8 +103,10 @@ class App extends React.Component {
     return (
       <div>
         <BrowserRouter>
-          <Navigation />
-          <Route exact path="/" component={Herocontent} />
+          <Navigation dark = {this.isDarkTheme}/>
+          <Route exact path="/" component={() => (
+              <Herocontent isDark = {this.state.isDark}/>
+          )} />
           <Route path="/login" component={Login} />
           <Fragment>
             <section className="section">

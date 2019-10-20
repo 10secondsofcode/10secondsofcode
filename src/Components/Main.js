@@ -18,7 +18,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className="main thememain-white">
+      <div className={this.props.isDark ? 'main thememain-dark' : 'main thememain-white'}>
         {
           titleMetaData.map((title) =>
             <div className="container content-main">

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Main from './Main';
 
-const Herocontent = () => (
+const Herocontent = (props) => (
   <Fragment>
     <div className="main thememain-blue">
       <div className="container main hero-content-main">
@@ -32,7 +32,7 @@ const Herocontent = () => (
         </div>
       </div>
     </div>
-    <Main />
+    <Main isDark = {props.isDark}/>
   </Fragment>
 );
 
