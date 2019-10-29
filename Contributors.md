@@ -67,4 +67,5 @@ When you modified the template you need to add them to the spaces between the "|
 4. [D'jay](https://github.com/Djay1407)
 5. [Heni Hendaoui](https://github.com/hendaoui)
 6. [jamal](https://github.com/jamaluddinfikri)
+7. [GiaTuongTran](https://github.com/giatuongtran9)
 

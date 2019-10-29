@@ -8,11 +8,14 @@ import Herocontent from './Components/Herocontent';
 import ReactMarkdown from 'react-markdown';
 import AppMarkdown from '../README.md';
 
+
 const markdownContext = require.context('../docs', false, /\.md$/);
 const markdownFiles = markdownContext
-  .keys()
-//.map((filename) => markdownContext(filename))
-//console.log("hey"+markdownFiles); 
+.keys();
+// .map((filename) => markdownContext(filename))
+
+console.log("hey"+markdownFiles); 
+
 
 class App extends React.Component {
   constructor(props) {
@@ -66,7 +69,7 @@ class App extends React.Component {
        console.log("hey--->"+result);
         this.setState({posts1: result});
       });*/
-      // this.setState({posts1: resp});
+      this.setState({posts1: resp});
       // console.log("dsffdsf===="+this.state.posts1);
       return resp;
     } catch (err) {
