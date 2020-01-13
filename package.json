@@ -30,7 +30,7 @@
   },
   "homepage": "http://10secondsofcode.github.io/10secondsofcode",
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.0.0",
