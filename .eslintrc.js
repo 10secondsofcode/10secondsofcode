@@ -1,19 +1,11 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
+  extends: "airbnb",
+  env: {
+    browser: true
   },
-  "plugins": [
-    "react",
-  ],
-  "globals": {
-    "graphql": false,
+  rules: {
+    'react/jsx-filename-extension': 'off',
+    'jsx-a11y/anchor-is-valid': 'off' // temporary solution (while we don't have a router)
   },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true,
-    },
-  }
+  "parser": "babel-eslint"
 }

@@ -1,8 +1,24 @@
-# elangovan.in  &nbsp; &nbsp; &nbsp; [![Netlify Status](https://api.netlify.com/api/v1/badges/21f90e8b-9a99-4752-af8e-f9b426b2da06/deploy-status)](https://app.netlify.com/sites/elangovan/deploys)
 
+# 10secondsofcode 
+10secondsofcode is a easy way to understand the JavaScript and ReactJS snippets in 10 seconds. 
 
-My personal blog - [Elangovan.in](https://github.com/elangosundar/elangovan.in).
+## Website 
+https://10seconds.netlify.com/
 
-To run locally, `yarn`, then `yarn dev`, then open https://localhost:8000.
-
-If you translate content into other languages feel free to PR links. Please ensure translations link to the original content.
+# Welcome to HacktoberFest 2019!
+Follow these steps to make your first pull request-
+  1. Fork this repository.
+  2. Clone your forked repository to your local machine.
+  3. Take any one of the issue from issues list and make a Pull Request.
+  4. Write these commands on your terminal-
+  ```
+  git add -A
+  git commit -m "your name"
+  git push origin master
+  ```
+  5. Then create a pull request.
+  6. Star the official repository of 10secondsofcode.
+  7. Congratulations!! You have successfully made a pull request.
+  8. Check your progress here (https://hacktoberfest.digitalocean.com/profile)
+  Wait for your shirt.
+ 
