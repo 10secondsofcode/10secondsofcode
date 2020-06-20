@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+  line-height: 1.5;
+  background-color: #fff;
+  color:white;
+}
+
+.flexbox h1, h2, h3, h4, p {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+  font-weight: 500;
+}
+
+.flexbox .p {
+  /* margin-bottom: 0px; */
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+p.content {
+  margin-bottom: 0px !important;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+}
+
+.flex-container {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me {
+  max-width: 800px;
+  text-align: center;
+}
+
+.flex-container img {
+  border-radius: 50%;
+}
+
+/* .flex-container h1 {
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+.flex-container h2 {
+  margin-top: 10px;
+  font-size: 24px;
+} */
+
+.social-ribbon ul {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.social-ribbon li {
+  padding-left: 0;
+  list-style: none;
+  display: inline-block;
+  margin: 15px;
+}
+
+.social-ribbon li a {
+  box-shadow: none;
+}
+
+.social-ribbon li a:hover i,
+.social-ribbon li a:focus i {
+  transform: scale(1.1, 1.1);
+  transition: all 0.2s ease-in;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*  Custom Theme CSS3 */
+.thememain-dark {
+  background: #333;
+}
+
+.thememain-dark .thememain-header {
+  background: linear-gradient(165deg, #6e60cc, #484389);
+  color: #333;
+}
+
+.thememain-dark .thememain-header a {
+  color: #333 !important;
+}
+
+.thememain-dark input {
+  background: #333;
+  border: #333;
+}
+
+.thememain-dark input:active,
+.thememain-dark input:focus {
+  background: #333;
+  border: #333;
+}
+
+.thememain-dark h3 {
+  color: #fff;
+}
+
+.thememain-blue {
+  background: linear-gradient(165deg, #6e60cc, #484389);
+  width: 100%;
+  min-height: 30rem;
+  margin: 0 auto;
+  padding-top: 50px;
+  box-sizing: border-box;
+  /* color: #333; */
+}
+
+/* Theme White Start */
+
+.thememain-white {
+  background: #fff;
+  color: black;
+  /* width: 100%; */
+  /* margin: 0 auto; */
+}
+
+.thememain-white h3 {
+  color: #333;
+}
+
+.thememain-header {
+  background: linear-gradient(165deg, #6e60cc, #484389);
+  color: #fff;
+}
+
+.thememain-header a {
+  color: #fff !important;
+  box-shadow: none;
+}
+
+/* Theme White Ends */
+
+.footer {
+  min-height: auto;
+}
+
+.thememain-footer {
+  background: linear-gradient(165deg, #6e60cc, #484389);
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+@media (max-width: 672px) {
+  .flex-container h1 {
+    font-size: 24px;
+  }
+  .flex-container h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .about-me {
+    text-align: center;
+    padding: 20px;
+  }
+  .flex-container ul {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .flex-container p {
+    font-size: 14px;
+  }
+}
