@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 const Main = (props) => {
     const titleMetaData = props.titleMetaData;
+    if(!titleMetaData) return null
 
     return(
         <Fragment>
