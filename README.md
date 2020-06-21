@@ -5,7 +5,7 @@
 ## Website 
 https://10seconds.netlify.com/
 
-# Welcome to HacktoberFest 2019!
+# Welcome to 10secondsofcode!
 Follow these steps to make your first pull request-
   1. Fork this repository.
   2. Clone your forked repository to your local machine.
@@ -17,8 +17,6 @@ Follow these steps to make your first pull request-
   git push origin master
   ```
   5. Then create a pull request.
-  6. Star the official repository of 10secondsofcode.
+  6. Star the official repository of `10secondsofcode`.
   7. Congratulations!! You have successfully made a pull request.
-  8. Check your progress here (https://hacktoberfest.digitalocean.com/profile)
-  Wait for your shirt.
- 
+  
