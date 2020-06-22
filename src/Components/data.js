@@ -1,28 +1,3 @@
-/*export const title = 
-{
-    "Javascript": {
-        "introduction": {
-            "Javascript Objects" : "Javascript Objects",
-            "Prototypal inheritance":"Prototypal inheritance",
-            "Scoping and hosting":"Scoping and hosting",
-            "Closures":"Closures",
-            "JavaScript Higher-Order Functions":"JavaScript Higher-Order Functions",
-            "The event loop":"The event loop",
-            "Event bubbling":"Event bubbling",
-            "Apply, call, and bind":"Apply, call, and bind",
-            "Callbacks and promises, async/await":"Callbacks and promises, async/await",
-            "Variable and function hoisting":"Callbacks and promises, async/await",
-            "Currying":"Currying",
-            "localstorage":"Currying",
-            "array fucntions":"Map, filter, reduce , sort of arrays"
-        },
-        "design pattern": {
-            "Decorator" : "Decorator",
-            "Factory":"Factory",
-            "Singleton":"Singleton"
-        }	
-    }
-}; */
 
 export const titleMetaData =
 [
@@ -32,7 +7,7 @@ export const titleMetaData =
             {
                 "id": "javascript-objects",
                 "title": "Javascript Objects",
-                "url": "javascript-objects"
+                "url": "/blog/javascript-objects"
             },
             {
                 "id": "prototypal-inheritance",
