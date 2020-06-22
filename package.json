@@ -43,8 +43,8 @@
     "env-cmd": "^10.0.1",
     "eslint": "^7.3.0",
     "eslint-plugin-react": "^7.11.1",
-    "gh-pages": "^2.1.1",
-    "prettier": "^1.14.2"
+    "gh-pages": "^3.1.0",
+    "prettier": "^2.0.5"
   },
   "homepage": "https://10secondsofcode.com",
   "license": "MIT",
