@@ -1,11 +1,17 @@
 
 # 10secondsofcode 
-10secondsofcode is a easy way to understand the JavaScript and ReactJS snippets in 10 seconds. 
+10secondsofcode is a easy way to understand the JavaScript and ReactJS snippets in 10 seconds. <br>
+This website idea is inspired from https://javascript.info
 
 ## Website 
-https://10seconds.netlify.com/
+https://www.10secondsofcode.com
 
-# Welcome to 10secondsofcode!
+# To add any concepts like reactjs and javascript follow the below steps
+
+1. Create / Edit the reactjs and javascripts concepts file in `src/pages/`.
+2. Those files linked into `src/components/data.js` and create a PR.
+
+# To contribute to 10secondsofcode!
 Follow these steps to make your first pull request-
   1. Fork this repository.
   2. Clone your forked repository to your local machine.
