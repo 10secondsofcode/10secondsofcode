@@ -44,7 +44,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^2.1.1",
-    "prettier": "^1.14.2"
+    "prettier": "^2.0.5"
   },
   "homepage": "https://10secondsofcode.com",
   "license": "MIT",
