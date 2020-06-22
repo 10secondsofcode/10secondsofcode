@@ -6,7 +6,7 @@ const titleMetaData =
             {
                 "id": "javascript-objects",
                 "title": "Javascript Objects",
-                "url": "javascript-objects"
+                "url": "/blog/javascript-objects"
             },
             {
                 "id": "prototypal-inheritance",
